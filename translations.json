@@ -1,0 +1,812 @@
+{
+  "Kalbos pasirinkimo nepavyko išsaugoti.": {
+    "en": "Could not save the language preference.",
+    "ru": "Не удалось сохранить выбранный язык.",
+    "zh": "无法保存语言设置。",
+    "it": "Impossibile salvare la lingua."
+  },
+  "Įdiegtos programos": {
+    "en": "Installed applications",
+    "ru": "Установленные приложения",
+    "zh": "已安装的应用",
+    "it": "Applicazioni installate"
+  },
+  "Nuskaitomas sistemos paketų sąrašas…": {
+    "en": "Reading system packages…",
+    "ru": "Чтение системных пакетов…",
+    "zh": "正在读取系统软件包…",
+    "it": "Lettura dei pacchetti di sistema…"
+  },
+  "PROGRAMOS": {
+    "en": "APPLICATIONS",
+    "ru": "ПРИЛОЖЕНИЯ",
+    "zh": "应用",
+    "it": "APPLICAZIONI"
+  },
+  "APT PAKETAI": {
+    "en": "APT PACKAGES",
+    "ru": "ПАКЕТЫ APT",
+    "zh": "APT 软件包",
+    "it": "PACCHETTI APT"
+  },
+  "PASIRINKTA": {
+    "en": "SELECTED",
+    "ru": "ВЫБРАНО",
+    "zh": "已选择",
+    "it": "SELEZIONATI"
+  },
+  "Pasirink vieną ar kelias programas.": {
+    "en": "Select one or more applications.",
+    "ru": "Выберите одно или несколько приложений.",
+    "zh": "选择一个或多个应用。",
+    "it": "Seleziona una o più applicazioni."
+  },
+  "Peržiūrėti šalinimą": {
+    "en": "Preview removal",
+    "ru": "Просмотр удаления",
+    "zh": "预览卸载",
+    "it": "Anteprima rimozione"
+  },
+  "Peržiūrėti valymą pagal pasirinktą tašką": {
+    "en": "Preview cleanup for the selected point",
+    "ru": "Просмотр очистки по выбранной точке",
+    "zh": "预览所选还原点的清理操作",
+    "it": "Anteprima pulizia dal punto selezionato"
+  },
+  "Veiksmas nebaigtas. Peržiūrėkite pranešimą.": {
+    "en": "Operation not completed. See the message.",
+    "ru": "Операция не завершена. См. сообщение.",
+    "zh": "操作未完成，请查看提示。",
+    "it": "Operazione non completata. Consulta il messaggio."
+  },
+  "Skaitomas įdiegtų programų sąrašas…": {
+    "en": "Loading installed applications…",
+    "ru": "Загрузка установленных приложений…",
+    "zh": "正在加载已安装的应用…",
+    "it": "Caricamento delle applicazioni installate…"
+  },
+  "Paruošta. Asmeniniai failai tiesiogiai netrinami.": {
+    "en": "Ready. Personal files are not directly deleted.",
+    "ru": "Готово. Личные файлы напрямую не удаляются.",
+    "zh": "就绪。不会直接删除个人文件。",
+    "it": "Pronto. I file personali non vengono eliminati direttamente."
+  },
+  "Išsaugomas paketų sąrašas…": {
+    "en": "Saving the package list…",
+    "ru": "Сохранение списка пакетов…",
+    "zh": "正在保存软件包列表…",
+    "it": "Salvataggio dell’elenco dei pacchetti…"
+  },
+  "Atkūrimo taškas išsaugotas. Programų failų kopijos nekurtos.": {
+    "en": "Restore point saved. No application files were backed up.",
+    "ru": "Точка восстановления сохранена. Копии файлов приложений не создавались.",
+    "zh": "清理还原点已保存。未备份应用文件。",
+    "it": "Punto di ripristino salvato. Nessun file delle applicazioni è stato copiato."
+  },
+  "APT tikrina šalinimo planą…": {
+    "en": "APT is checking the removal plan…",
+    "ru": "APT проверяет план удаления…",
+    "zh": "APT 正在检查卸载计划…",
+    "it": "APT sta verificando il piano di rimozione…"
+  },
+  "Planas paruoštas. Sistema dar nepakeista.": {
+    "en": "Plan ready. No system changes have been made.",
+    "ru": "План готов. Система ещё не изменена.",
+    "zh": "计划已就绪，尚未更改系统。",
+    "it": "Piano pronto. Il sistema non è stato modificato."
+  },
+  "Peržiūrėk pakeitimus": {
+    "en": "Review changes",
+    "ru": "Проверьте изменения",
+    "zh": "检查更改",
+    "it": "Controlla le modifiche"
+  },
+  "Papildomų šalintinų paketų nėra.": {
+    "en": "No additional packages to remove.",
+    "ru": "Нет дополнительных пакетов для удаления.",
+    "zh": "没有需要移除的额外软件包。",
+    "it": "Nessun pacchetto aggiuntivo da rimuovere."
+  },
+  "Grafinę programą paleiskite be sudo. Teisių ji paprašys tik šalinant.": {
+    "en": "Start the GUI without sudo. It will request privileges only when removing packages.",
+    "ru": "Запустите интерфейс без sudo. Права будут запрошены только при удалении пакетов.",
+    "zh": "请勿使用 sudo 启动界面。仅卸载软件包时会请求权限。",
+    "it": "Avvia l’interfaccia senza sudo. I privilegi saranno richiesti solo per rimuovere pacchetti."
+  },
+  "Nėra ryšio su grafine sesija. Paleiskite programą savo Linux darbalaukio terminale.": {
+    "en": "No graphical session is available. Start the app from your Linux desktop terminal.",
+    "ru": "Нет доступа к графическому сеансу. Запустите приложение из терминала рабочего стола Linux.",
+    "zh": "无法连接图形会话。请在 Linux 桌面的终端中启动应用。",
+    "it": "Sessione grafica non disponibile. Avvia l’app dal terminale del desktop Linux."
+  },
+  "Mažiau pertekliaus.\nDaugiau tvarkos.": {
+    "en": "Less clutter.\nMore control.",
+    "ru": "Меньше лишнего.\nБольше порядка.",
+    "zh": "减少冗余。\n井然有序。",
+    "it": "Meno superfluo.\nPiù ordine."
+  },
+  "Programos": {
+    "en": "Applications",
+    "ru": "Приложения",
+    "zh": "应用",
+    "it": "Applicazioni"
+  },
+  "Visi paketai": {
+    "en": "All packages",
+    "ru": "Все пакеты",
+    "zh": "所有软件包",
+    "it": "Tutti i pacchetti"
+  },
+  "Atkūrimo taškai": {
+    "en": "Restore points",
+    "ru": "Точки восстановления",
+    "zh": "清理还原点",
+    "it": "Punti di ripristino"
+  },
+  "Atnaujinimai išsaugomi": {
+    "en": "Updates are preserved",
+    "ru": "Обновления сохраняются",
+    "zh": "保留更新",
+    "it": "Aggiornamenti mantenuti"
+  },
+  "Administratoriaus teisės\ntik šalinant paketus.": {
+    "en": "Administrator access\nonly to remove packages.",
+    "ru": "Права администратора\nтолько для удаления.",
+    "zh": "仅卸载软件包时\n需要管理员权限。",
+    "it": "Privilegi amministrativi\nsolo per la rimozione."
+  },
+  "Atnaujinti": {
+    "en": "Refresh",
+    "ru": "Обновить список",
+    "zh": "刷新",
+    "it": "Aggiorna elenco"
+  },
+  "Ieškoti programos arba paketo…": {
+    "en": "Search applications or packages…",
+    "ru": "Поиск приложений и пакетов…",
+    "zh": "搜索应用或软件包…",
+    "it": "Cerca applicazioni o pacchetti…"
+  },
+  "Pažymėti matomas": {
+    "en": "Select visible",
+    "ru": "Выбрать видимые",
+    "zh": "选择可见项",
+    "it": "Seleziona visibili"
+  },
+  "Atžymėti": {
+    "en": "Clear selection",
+    "ru": "Снять выделение",
+    "zh": "取消选择",
+    "it": "Deseleziona"
+  },
+  "Pašalinti ir šioms programoms nebereikalingas bibliotekas": {
+    "en": "Also remove libraries no longer needed by these applications",
+    "ru": "Также удалить библиотеки, больше не нужные этим приложениям",
+    "zh": "同时移除这些应用不再需要的库",
+    "it": "Rimuovi anche le librerie non più necessarie a queste applicazioni"
+  },
+  "Restore point = išsaugotas paketų sąrašas": {
+    "en": "Restore point = a saved package list",
+    "ru": "Точка восстановления = сохранённый список пакетов",
+    "zh": "还原点 = 已保存的软件包列表",
+    "it": "Punto di ripristino = elenco dei pacchetti salvato"
+  },
+  "Valant pagal tašką pašalinami vėliau įdiegti APT paketai. Esamų programų atnaujinimai išsaugomi. Atsarginė kopija nekuriama; failai, nustatymai ir pašalintos programos neatkuriami.": {
+    "en": "Cleanup removes APT packages installed after the point was saved. Existing application updates are kept. This is not a backup: files, settings and removed applications are not restored.",
+    "ru": "Очистка удаляет пакеты APT, установленные после сохранения точки. Обновления исходных приложений сохраняются. Это не резервная копия: файлы, настройки и удалённые приложения не восстанавливаются.",
+    "zh": "清理会移除保存还原点之后安装的 APT 软件包，并保留原有应用的更新。这不是备份：不会恢复文件、设置或已卸载的应用。",
+    "it": "La pulizia rimuove i pacchetti APT installati dopo il salvataggio del punto, mantenendo gli aggiornamenti delle applicazioni esistenti. Non è un backup: file, impostazioni e applicazioni rimosse non vengono ripristinati."
+  },
+  "Pavadinimas, pvz. Švari sistema": {
+    "en": "Name, e.g. Clean system",
+    "ru": "Название, например «Чистая система»",
+    "zh": "名称，例如：干净的系统",
+    "it": "Nome, ad esempio Sistema pulito"
+  },
+  "Sukurti tašką": {
+    "en": "Create point",
+    "ru": "Создать точку",
+    "zh": "创建还原点",
+    "it": "Crea punto"
+  },
+  "Taip pat išvalyti APT atsisiuntimų podėlį": {
+    "en": "Also clear the APT download cache",
+    "ru": "Также очистить кэш загрузок APT",
+    "zh": "同时清理 APT 下载缓存",
+    "it": "Svuota anche la cache dei download APT"
+  },
+  "Palaukite, kol operacija baigsis. Paketų šalinimo nepertraukite.": {
+    "en": "Wait for the operation to finish. Do not interrupt package removal.",
+    "ru": "Дождитесь завершения операции. Не прерывайте удаление пакетов.",
+    "zh": "请等待操作完成，不要中断软件包卸载。",
+    "it": "Attendi il completamento. Non interrompere la rimozione dei pacchetti."
+  },
+  "Programos su meniu įrašais. Pasirink, ką pašalinti.": {
+    "en": "Applications with menu entries. Choose what to remove.",
+    "ru": "Приложения с пунктами меню. Выберите, что удалить.",
+    "zh": "具有菜单项的应用。选择要卸载的项目。",
+    "it": "Applicazioni presenti nel menu. Scegli cosa rimuovere."
+  },
+  "Visi sistemos paketai": {
+    "en": "All system packages",
+    "ru": "Все системные пакеты",
+    "zh": "所有系统软件包",
+    "it": "Tutti i pacchetti di sistema"
+  },
+  "APT programos ir bibliotekos. Sistemos komponentai apsaugoti.": {
+    "en": "APT applications and libraries. System components are protected.",
+    "ru": "Приложения и библиотеки APT. Системные компоненты защищены.",
+    "zh": "APT 应用与库。系统组件受保护。",
+    "it": "Applicazioni e librerie APT. I componenti di sistema sono protetti."
+  },
+  "Užfiksuok tvarkingą būseną ir vėliau pašalink papildomus paketus.": {
+    "en": "Save a clean baseline and remove extra packages later.",
+    "ru": "Сохраните чистое состояние, чтобы позже удалить лишние пакеты.",
+    "zh": "保存干净的初始状态，以便日后移除额外软件包。",
+    "it": "Salva uno stato pulito per rimuovere in seguito i pacchetti aggiuntivi."
+  },
+  "Programų nerasta. Pakeisk paiešką arba pasirink „Visi paketai“.": {
+    "en": "No applications found. Change the search or choose All packages.",
+    "ru": "Приложения не найдены. Измените поиск или выберите «Все пакеты».",
+    "zh": "未找到应用。请修改搜索条件或选择“所有软件包”。",
+    "it": "Nessuna applicazione trovata. Modifica la ricerca o scegli Tutti i pacchetti."
+  },
+  "Rodyti daugiau": {
+    "en": "Show more",
+    "ru": "Показать ещё",
+    "zh": "显示更多",
+    "it": "Mostra altro"
+  },
+  "Rodyti daugiau · {shown} iš {total}": {
+    "en": "Show more · {shown} of {total}",
+    "ru": "Показать ещё · {shown} из {total}",
+    "zh": "显示更多 · {shown} / {total}",
+    "it": "Mostra altro · {shown} di {total}"
+  },
+  "Pasirinkta paketų: {count}. Prieš šalinimą bus parodytas planas.": {
+    "en": "Selected packages: {count}. A plan will be shown before removal.",
+    "ru": "Выбрано пакетов: {count}. Перед удалением будет показан план.",
+    "zh": "已选择 {count} 个软件包。卸载前将显示计划。",
+    "it": "Pacchetti selezionati: {count}. Il piano verrà mostrato prima della rimozione."
+  },
+  "Švari sistema ": {
+    "en": "Clean system ",
+    "ru": "Чистая система ",
+    "zh": "干净的系统 ",
+    "it": "Sistema pulito "
+  },
+  "Švari sistema be žaidimų": {
+    "en": "Clean system without games",
+    "ru": "Чистая система без игр",
+    "zh": "不含游戏的干净系统",
+    "it": "Sistema pulito senza giochi"
+  },
+  "{created}  ·  {count} paketų": {
+    "en": "{created}  ·  {count} packages",
+    "ru": "{created}  ·  Пакетов: {count}",
+    "zh": "{created}  ·  {count} 个软件包",
+    "it": "{created}  ·  {count} pacchetti"
+  },
+  "Išsaugotas naujas taškas: {count} paketų.": {
+    "en": "New point saved: {count} packages.",
+    "ru": "Новая точка сохранена. Пакетов: {count}.",
+    "zh": "已保存新还原点：{count} 个软件包。",
+    "it": "Nuovo punto salvato: {count} pacchetti."
+  },
+  "Atnaujinami taškai…": {
+    "en": "Refreshing points…",
+    "ru": "Обновление списка точек…",
+    "zh": "正在刷新还原点…",
+    "it": "Aggiornamento dei punti…"
+  },
+  "Uždaryti": {
+    "en": "Close",
+    "ru": "Закрыть",
+    "zh": "关闭",
+    "it": "Chiudi"
+  },
+  "Nepavyko atlikti veiksmo": {
+    "en": "Operation failed",
+    "ru": "Операция не выполнена",
+    "zh": "操作失败",
+    "it": "Operazione non riuscita"
+  },
+  "Rengiamas valymo planas…": {
+    "en": "Preparing cleanup plan…",
+    "ru": "Подготовка плана очистки…",
+    "zh": "正在准备清理计划…",
+    "it": "Preparazione del piano di pulizia…"
+  },
+  "Nėra ką šalinti": {
+    "en": "Nothing to remove",
+    "ru": "Нечего удалять",
+    "zh": "无需卸载",
+    "it": "Nulla da rimuovere"
+  },
+  "Pagal šį pasirinkimą papildomų šalintinų paketų nėra.": {
+    "en": "There are no extra packages to remove for this selection.",
+    "ru": "Для этого выбора нет дополнительных пакетов для удаления.",
+    "zh": "所选项目没有需要移除的额外软件包。",
+    "it": "Non ci sono pacchetti aggiuntivi da rimuovere per questa selezione."
+  },
+  "Bus pašalinti toliau išvardyti paketai ir jų sisteminė konfigūracija. Paketo pašalinimo scenarijai gali pašalinti ir jo paslaugos duomenis.": {
+    "en": "The listed packages and their system configuration will be removed. Package removal scripts may also delete service data.",
+    "ru": "Указанные пакеты и их системные настройки будут удалены. Сценарии удаления пакетов также могут удалить данные служб.",
+    "zh": "将移除下列软件包及其系统配置。软件包卸载脚本也可能删除服务数据。",
+    "it": "Verranno rimossi i pacchetti elencati e la loro configurazione di sistema. Gli script di rimozione possono eliminare anche i dati dei servizi."
+  },
+  "\n\nTaško paketai, kurių dabar nėra (nebus įdiegti iš naujo):\n": {
+    "en": "\n\nPackages missing from this point (will not be reinstalled):\n",
+    "ru": "\n\nОтсутствующие пакеты из этой точки (не будут установлены заново):\n",
+    "zh": "\n\n此还原点中目前缺失的软件包（不会重新安装）：\n",
+    "it": "\n\nPacchetti del punto ora assenti (non verranno reinstallati):\n"
+  },
+  "Atšaukti": {
+    "en": "Cancel",
+    "ru": "Отмена",
+    "zh": "取消",
+    "it": "Annulla"
+  },
+  "Laukiama administratoriaus patvirtinimo / vykdomas šalinimas…": {
+    "en": "Waiting for administrator approval / removing packages…",
+    "ru": "Ожидание подтверждения администратора / удаление пакетов…",
+    "zh": "正在等待管理员授权或卸载软件包…",
+    "it": "In attesa dell’autorizzazione / rimozione dei pacchetti…"
+  },
+  "Pašalinta paketų: {count}.\nŽurnalas: {log}": {
+    "en": "Packages removed: {count}.\nLog: {log}",
+    "ru": "Удалено пакетов: {count}.\nЖурнал: {log}",
+    "zh": "已移除 {count} 个软件包。\n日志：{log}",
+    "it": "Pacchetti rimossi: {count}.\nRegistro: {log}"
+  },
+  "Valymas baigtas": {
+    "en": "Cleanup completed",
+    "ru": "Очистка завершена",
+    "zh": "清理完成",
+    "it": "Pulizia completata"
+  },
+  "Administratoriaus patvirtinimas atšauktas arba neprieinamas. Paleiskite programą savo Linux darbalaukio sesijoje.": {
+    "en": "Administrator approval was cancelled or is unavailable. Start the app in your Linux desktop session.",
+    "ru": "Подтверждение администратора отменено или недоступно. Запустите приложение в сеансе рабочего стола Linux.",
+    "zh": "管理员授权已取消或不可用。请在 Linux 桌面会话中启动应用。",
+    "it": "Autorizzazione annullata o non disponibile. Avvia l’app nella sessione desktop Linux."
+  },
+  "Meniu įrašas be APT paketo": {
+    "en": "Menu entry without an APT package",
+    "ru": "Пункт меню без пакета APT",
+    "zh": "无对应 APT 软件包的菜单项",
+    "it": "Voce di menu senza pacchetto APT"
+  },
+  "Sąrašas": {
+    "en": "List",
+    "ru": "Список",
+    "zh": "列表",
+    "it": "Elenco"
+  },
+  "Dar nėra atkūrimo taškų. Sukurk pirmąjį aukščiau.": {
+    "en": "No restore points yet. Create the first one above.",
+    "ru": "Точек очистки пока нет. Создайте первую выше.",
+    "zh": "尚无清理还原点。请在上方创建。",
+    "it": "Nessun punto di ripristino. Crea il primo qui sopra."
+  },
+  "{count} paketų  ·  apie {size}": {
+    "en": "{count} packages  ·  about {size}",
+    "ru": "Пакетов: {count}  ·  около {size}",
+    "zh": "{count} 个软件包  ·  约 {size}",
+    "it": "{count} pacchetti  ·  circa {size}"
+  },
+  "Taip pat bus išvalytas APT atsisiuntimų podėlis.": {
+    "en": "The APT download cache will also be cleared.",
+    "ru": "Кэш загрузок APT также будет очищен.",
+    "zh": "同时将清理 APT 下载缓存。",
+    "it": "Verrà svuotata anche la cache dei download APT."
+  },
+  "Patvirtinti valymą": {
+    "en": "Confirm cleanup",
+    "ru": "Подтвердить очистку",
+    "zh": "确认清理",
+    "it": "Conferma pulizia"
+  },
+  "Pašalinti pasirinktus paketus": {
+    "en": "Remove selected packages",
+    "ru": "Удалить выбранные пакеты",
+    "zh": "卸载所选软件包",
+    "it": "Rimuovi i pacchetti selezionati"
+  },
+  "Nepavyko paleisti paketų valdiklio.": {
+    "en": "Could not start the package manager.",
+    "ru": "Не удалось запустить менеджер пакетов.",
+    "zh": "无法启动软件包管理器。",
+    "it": "Impossibile avviare il gestore dei pacchetti."
+  },
+  "Ne APT": {
+    "en": "Not APT",
+    "ru": "Не APT",
+    "zh": "非 APT",
+    "it": "Non APT"
+  },
+  "\nŠis įrašas rodomas informaciniais tikslais; jo nevaldo APT.": {
+    "en": "\nThis entry is informational; it is not managed by APT.",
+    "ru": "\nЭтот пункт показан для справки; он не управляется APT.",
+    "zh": "\n此条目仅供参考，不由 APT 管理。",
+    "it": "\nQuesta voce è informativa e non è gestita da APT."
+  },
+  "Apsaugota": {
+    "en": "Protected",
+    "ru": "Защищено",
+    "zh": "受保护",
+    "it": "Protetto"
+  },
+  "Konfigūracijos likučiai": {
+    "en": "Configuration leftovers",
+    "ru": "Остатки конфигурации",
+    "zh": "配置残留",
+    "it": "Residui di configurazione"
+  },
+  "Pasirinkta": {
+    "en": "Selected",
+    "ru": "Выбрано",
+    "zh": "已选择",
+    "it": "Selezionato"
+  },
+  "APT priklausomybės": {
+    "en": "APT dependencies",
+    "ru": "Зависимости APT",
+    "zh": "APT 依赖项",
+    "it": "Dipendenze APT"
+  },
+  "Netinkamas atkūrimo taškas.": {
+    "en": "Invalid restore point.",
+    "ru": "Недопустимая точка восстановления.",
+    "zh": "清理还原点无效。",
+    "it": "Punto di ripristino non valido."
+  },
+  "Taškas priklauso kitam kompiuteriui arba Debian leidimui.": {
+    "en": "This point belongs to another computer or Debian release.",
+    "ru": "Точка относится к другому компьютеру или выпуску Debian.",
+    "zh": "此还原点属于其他计算机或 Debian 版本。",
+    "it": "Il punto appartiene a un altro computer o a un’altra versione di Debian."
+  },
+  "Taške nėra tinkamo paketų sąrašo.": {
+    "en": "The point has no valid package list.",
+    "ru": "Точка не содержит корректного списка пакетов.",
+    "zh": "此还原点不包含有效的软件包列表。",
+    "it": "Il punto non contiene un elenco valido dei pacchetti."
+  },
+  "Taško paketų sąrašas netinkamas.": {
+    "en": "Invalid package list in this point.",
+    "ru": "Некорректный список пакетов в точке.",
+    "zh": "还原点中的软件包列表无效。",
+    "it": "Elenco dei pacchetti del punto non valido."
+  },
+  "Taško pavadinimas turi būti nuo 1 iki 100 simbolių.": {
+    "en": "The point name must contain 1 to 100 characters.",
+    "ru": "Название точки должно содержать от 1 до 100 символов.",
+    "zh": "还原点名称必须包含 1 至 100 个字符。",
+    "it": "Il nome del punto deve contenere da 1 a 100 caratteri."
+  },
+  "Pirmiausia sutvarkykite APT priklausomybes.": {
+    "en": "Fix APT dependencies first.",
+    "ru": "Сначала исправьте зависимости APT.",
+    "zh": "请先修复 APT 依赖关系。",
+    "it": "Correggi prima le dipendenze APT."
+  },
+  "Paketų būsena pasikeitė. Bandykite dar kartą.": {
+    "en": "Package state changed. Try again.",
+    "ru": "Состояние пакетов изменилось. Повторите попытку.",
+    "zh": "软件包状态已更改，请重试。",
+    "it": "Lo stato dei pacchetti è cambiato. Riprova."
+  },
+  "APT turi pažeistų priklausomybių. Pirmiausia jas sutvarkykite.": {
+    "en": "APT has broken dependencies. Fix them first.",
+    "ru": "В APT нарушены зависимости. Сначала исправьте их.",
+    "zh": "APT 存在损坏的依赖关系，请先修复。",
+    "it": "APT ha dipendenze danneggiate. Correggile prima."
+  },
+  "Šalinimas pažeistų priklausomybes arba keistų kitų paketų versijas.": {
+    "en": "Removal would break dependencies or change other package versions.",
+    "ru": "Удаление нарушит зависимости или изменит версии других пакетов.",
+    "zh": "卸载将破坏依赖关系或更改其他软件包版本。",
+    "it": "La rimozione danneggerebbe dipendenze o modificherebbe versioni di altri pacchetti."
+  },
+  "APT planas paliestų apsaugotus sistemos komponentus. Šalinimas sustabdytas.": {
+    "en": "The APT plan would affect protected system components. Removal blocked.",
+    "ru": "План APT затрагивает защищённые компоненты системы. Удаление заблокировано.",
+    "zh": "APT 计划将影响受保护的系统组件，已阻止卸载。",
+    "it": "Il piano APT coinvolge componenti di sistema protetti. Rimozione bloccata."
+  },
+  "Paketų būsena pasikeitė rengiant planą. Bandykite dar kartą.": {
+    "en": "Package state changed while planning. Try again.",
+    "ru": "Состояние пакетов изменилось при подготовке плана. Повторите попытку.",
+    "zh": "规划过程中软件包状态已更改，请重试。",
+    "it": "Lo stato dei pacchetti è cambiato durante la pianificazione. Riprova."
+  },
+  "Šalinimui reikalingas administratoriaus patvirtinimas.": {
+    "en": "Removal requires administrator approval.",
+    "ru": "Для удаления требуется подтверждение администратора.",
+    "zh": "卸载需要管理员授权。",
+    "it": "La rimozione richiede l’autorizzazione dell’amministratore."
+  },
+  "Netinkamas taško identifikatorius.": {
+    "en": "Invalid point identifier.",
+    "ru": "Недопустимый идентификатор точки.",
+    "zh": "还原点标识符无效。",
+    "it": "Identificatore del punto non valido."
+  },
+  "Pasirinkite bent vieną įdiegtą paketą.": {
+    "en": "Select at least one installed package.",
+    "ru": "Выберите хотя бы один установленный пакет.",
+    "zh": "请至少选择一个已安装的软件包。",
+    "it": "Seleziona almeno un pacchetto installato."
+  },
+  "Pasirinktų paketų būsena pasikeitė. Atnaujinkite sąrašą.": {
+    "en": "The selected packages changed. Refresh the list.",
+    "ru": "Состояние выбранных пакетов изменилось. Обновите список.",
+    "zh": "所选软件包的状态已更改，请刷新列表。",
+    "it": "I pacchetti selezionati sono cambiati. Aggiorna l’elenco."
+  },
+  "Pasirinktas apsaugotas sistemos paketas arba jo priklausomybė.": {
+    "en": "A protected system package or dependency was selected.",
+    "ru": "Выбран защищённый системный пакет или его зависимость.",
+    "zh": "选择了受保护的系统软件包或其依赖项。",
+    "it": "È stato selezionato un pacchetto di sistema protetto o una sua dipendenza."
+  },
+  "Nežinomas veiksmas.": {
+    "en": "Unknown action.",
+    "ru": "Неизвестное действие.",
+    "zh": "未知操作。",
+    "it": "Azione sconosciuta."
+  },
+  "Sistema arba planas pasikeitė. Iš naujo peržiūrėkite pakeitimus.": {
+    "en": "The system or plan changed. Review the changes again.",
+    "ru": "Система или план изменились. Проверьте изменения ещё раз.",
+    "zh": "系统或计划已更改，请重新检查更改。",
+    "it": "Il sistema o il piano è cambiato. Controlla di nuovo le modifiche."
+  },
+  "Užklausa per didelė.": {
+    "en": "Request is too large.",
+    "ru": "Слишком большой запрос.",
+    "zh": "请求过大。",
+    "it": "Richiesta troppo grande."
+  },
+  "Netinkama užklausa.": {
+    "en": "Invalid request.",
+    "ru": "Некорректный запрос.",
+    "zh": "无效请求。",
+    "it": "Richiesta non valida."
+  },
+  "Šalinimas paliestų apsaugotą sistemos priklausomybę.": {
+    "en": "Removal would affect a protected system dependency.",
+    "ru": "Удаление затронет защищённую системную зависимость.",
+    "zh": "卸载将影响受保护的系统依赖项。",
+    "it": "La rimozione coinvolgerebbe una dipendenza di sistema protetta."
+  },
+  "Patikra po šalinimo nepavyko. Tikrinkite dpkg žurnalą.": {
+    "en": "Post-removal verification failed. Check the dpkg log.",
+    "ru": "Проверка после удаления не пройдена. Проверьте журнал dpkg.",
+    "zh": "卸载后验证失败，请检查 dpkg 日志。",
+    "it": "Verifica dopo la rimozione non riuscita. Controlla il registro dpkg."
+  },
+  "Paketų šalinimas nebaigtas.": {
+    "en": "Package removal did not complete.",
+    "ru": "Удаление пакетов не завершено.",
+    "zh": "软件包卸载未完成。",
+    "it": "Rimozione dei pacchetti non completata."
+  },
+  "dpkg turi neužbaigtų operacijų:\n": {
+    "en": "dpkg has unfinished operations:\n",
+    "ru": "В dpkg есть незавершённые операции:\n",
+    "zh": "dpkg 有未完成的操作：\n",
+    "it": "dpkg ha operazioni incomplete:\n"
+  },
+  "Konfigūracijos likučių šalinimo planas netinkamas. Nieko nešalinama.": {
+    "en": "Invalid configuration cleanup plan. Nothing will be removed.",
+    "ru": "Некорректный план очистки конфигурации. Ничего не будет удалено.",
+    "zh": "配置清理计划无效，不会移除任何内容。",
+    "it": "Piano di pulizia della configurazione non valido. Non verrà rimosso nulla."
+  },
+  "Kalba": {
+    "en": "Language",
+    "ru": "Язык",
+    "zh": "语言",
+    "it": "Lingua"
+  },
+  "PAKETAI": {
+    "en": "PACKAGES",
+    "ru": "ПАКЕТЫ",
+    "zh": "软件包",
+    "it": "PACCHETTI"
+  },
+  "Tikrinamas šalinimo planas…": {
+    "en": "is checking the removal plan…",
+    "ru": "проверяет план удаления…",
+    "zh": "正在检查卸载计划…",
+    "it": "sta verificando il piano di rimozione…"
+  },
+  "Valant pagal tašką pašalinami vėliau įdiegti paketai. Esamų programų atnaujinimai išsaugomi. Atsarginė kopija nekuriama; failai, nustatymai ir pašalintos programos neatkuriami.": {
+    "en": "Cleanup removes packages installed after the point was saved. Existing application updates are kept. This is not a backup: files, settings and removed applications are not restored.",
+    "ru": "Очистка удаляет пакеты, установленные после сохранения точки. Обновления исходных приложений сохраняются. Это не резервная копия: файлы, настройки и удалённые приложения не восстанавливаются.",
+    "zh": "清理会移除保存还原点之后安装的 软件包，并保留原有应用的更新。这不是备份：不会恢复文件、设置或已卸载的应用。",
+    "it": "La pulizia rimuove i pacchetti installati dopo il salvataggio del punto, mantenendo gli aggiornamenti delle applicazioni esistenti. Non è un backup: file, impostazioni e applicazioni rimosse non vengono ripristinati."
+  },
+  "Programos ir bibliotekos. Sistemos komponentai apsaugoti.": {
+    "en": "applications and libraries. System components are protected.",
+    "ru": "Приложения и библиотеки. Системные компоненты защищены.",
+    "zh": "应用与库。系统组件受保护。",
+    "it": "Applicazioni e librerie. I componenti di sistema sono protetti."
+  },
+  "Bus pašalinti toliau išvardyti paketai. Konfigūracijos šalinimas priklauso nuo paketų valdiklio. Paketo pašalinimo scenarijai gali pašalinti ir jo paslaugos duomenis.": {
+    "en": "The packages below will be removed. Configuration cleanup depends on the package manager. Package removal scripts may also delete service data.",
+    "ru": "Будут удалены перечисленные пакеты. Очистка конфигурации зависит от пакетного менеджера. Скрипты удаления могут также удалить данные службы.",
+    "zh": "将删除以下软件包。配置清理取决于软件包管理器。卸载脚本也可能删除服务数据。",
+    "it": "Verranno rimossi i pacchetti elencati. La pulizia della configurazione dipende dal gestore pacchetti. Gli script di rimozione possono eliminare anche i dati dei servizi."
+  },
+  "Meniu įrašas be sistemos paketo": {
+    "en": "Menu entry without an package",
+    "ru": "Пункт меню без пакета",
+    "zh": "无对应 软件包的菜单项",
+    "it": "Voce di menu senza pacchetto"
+  },
+  "Išorinis": {
+    "en": "External",
+    "ru": "Внешнее",
+    "zh": "外部",
+    "it": "Esterno"
+  },
+  "\nŠis įrašas rodomas informaciniais tikslais; jo nevaldo sistemos paketų valdiklis.": {
+    "en": "\nThis entry is informational; it is not managed by.",
+    "ru": "\nЭтот пункт показан для справки; он не управляется.",
+    "zh": "\n此条目仅供参考，不由 管理。",
+    "it": "\nQuesta voce è informativa e non è gestita da."
+  },
+  "Galutinį paketų valdiklio planą reikės patvirtinti terminale.": {
+    "en": "Confirm the final package manager transaction in the terminal.",
+    "ru": "Подтвердите окончательный план пакетного менеджера в терминале.",
+    "zh": "请在终端中确认软件包管理器的最终操作。",
+    "it": "Conferma nel terminale il piano finale del gestore pacchetti."
+  },
+  "Selected for removal": {
+    "en": "Selected for removal",
+    "ru": "Выбрано для удаления",
+    "zh": "已选择删除",
+    "it": "Selezionato per la rimozione"
+  },
+  "Ištrinti tašką": {
+    "en": "Delete point",
+    "ru": "Удалить точку",
+    "zh": "删除还原点",
+    "it": "Elimina punto"
+  },
+  "Ištrinti atkūrimo tašką?": {
+    "en": "Delete restore point?",
+    "ru": "Удалить точку восстановления?",
+    "zh": "删除还原点？",
+    "it": "Eliminare il punto di ripristino?"
+  },
+  "Bus ištrintas tik išsaugotas paketų sąrašas. Įdiegtos programos nebus keičiamos.": {
+    "en": "Only the saved package list will be deleted. Installed applications will not change.",
+    "ru": "Будет удалён только сохранённый список пакетов. Установленные программы не изменятся.",
+    "zh": "仅删除保存的软件包列表，不会更改已安装的应用程序。",
+    "it": "Verrà eliminato solo l’elenco salvato dei pacchetti. Le applicazioni installate non cambieranno."
+  },
+  "Atkūrimo taškas ištrintas.": {
+    "en": "Restore point deleted.",
+    "ru": "Точка восстановления удалена.",
+    "zh": "还原点已删除。",
+    "it": "Punto di ripristino eliminato."
+  },
+  "Apie programą": {
+    "en": "About",
+    "ru": "О программе",
+    "zh": "关于",
+    "it": "Informazioni"
+  },
+  "Programos aprašymas": {
+    "en": "Program description",
+    "ru": "Описание программы",
+    "zh": "程序介绍",
+    "it": "Descrizione del programma"
+  },
+  "Licencija": {
+    "en": "License",
+    "ru": "Лицензия",
+    "zh": "许可证",
+    "it": "Licenza"
+  },
+  "Rodyti licenciją": {
+    "en": "View license",
+    "ru": "Показать лицензию",
+    "zh": "查看许可证",
+    "it": "Mostra licenza"
+  },
+  "Paremti per PayPal": {
+    "en": "Donate with PayPal",
+    "ru": "Поддержать через PayPal",
+    "zh": "通过 PayPal 捐赠",
+    "it": "Dona con PayPal"
+  },
+  "Parama savanoriška. Gavėjas: grygas@gmail.com.": {
+    "en": "Donations are optional. Recipient: grygas@gmail.com.",
+    "ru": "Пожертвования добровольны. Получатель: grygas@gmail.com.",
+    "zh": "捐赠完全自愿。收款人：grygas@gmail.com。",
+    "it": "Le donazioni sono facoltative. Destinatario: grygas@gmail.com."
+  },
+  "Linux fresh point padeda prižiūrėti Linux programų rinkinį: peržiūrėti įdiegtas programas ir bibliotekas, pasirinkti vieną ar kelis paketus šalinimui ir prieš vykdymą patikrinti planą. Tikslas – sumažinti nereikalingų paketų kiekį, išsaugant esamų programų atnaujinimus.": {
+    "en": "Linux fresh point helps maintain your Linux software: view installed applications and libraries, select one or more packages for removal, and review the plan before applying it. Its goal is to reduce unnecessary packages while keeping existing software updates.",
+    "ru": "Linux fresh point помогает обслуживать программы Linux: просматривать установленные приложения и библиотеки, выбирать один или несколько пакетов для удаления и проверять план перед выполнением. Цель — сократить число ненужных пакетов, сохраняя обновления существующих программ.",
+    "zh": "Linux fresh point 帮助管理 Linux 软件：查看已安装的应用程序和库，选择一个或多个软件包进行删除，并在执行前查看计划。目标是减少不需要的软件包，同时保留现有软件的更新。",
+    "it": "Linux fresh point aiuta a gestire il software Linux: visualizzare applicazioni e librerie installate, selezionare uno o più pacchetti da rimuovere e controllare il piano prima di applicarlo. L’obiettivo è ridurre i pacchetti inutili mantenendo gli aggiornamenti del software esistente."
+  },
+  "Atkūrimo taškas saugo paketų sąrašą. Pagal jį galima šalinti vėliau pridėtus paketus, paliekant reikalingas priklausomybes. Tai nėra failų atsarginė kopija: nustatymai, ištrinti failai ir pašalintos programos neatkuriami. Taškus galima kurti ir ištrinti.": {
+    "en": "A restore point stores a package list. It can be used to remove packages added later while retaining required dependencies. It is not a file backup: settings, deleted files and removed applications are not restored. You can create and delete points.",
+    "ru": "Точка восстановления хранит список пакетов. По нему можно удалять пакеты, добавленные позже, сохраняя необходимые зависимости. Это не резервная копия файлов: настройки, удалённые файлы и приложения не восстанавливаются. Точки можно создавать и удалять.",
+    "zh": "还原点保存软件包列表，可用于删除之后添加的软件包，同时保留必要的依赖项。它不是文件备份：不会恢复设置、已删除的文件或已卸载的应用程序。可以创建和删除还原点。",
+    "it": "Un punto di ripristino salva un elenco di pacchetti. Consente di rimuovere quelli aggiunti successivamente mantenendo le dipendenze necessarie. Non è un backup dei file: impostazioni, file eliminati e applicazioni rimosse non vengono ripristinati. Puoi creare ed eliminare i punti."
+  },
+  "Programa automatiškai atpažįsta palaikomą distribuciją ir APT, Pacman, Portage, DNF arba Zypper valdiklį. Sąsaja turi penkias kalbas. Portable leidimas veikia be programos diegimo, jei kompiuteryje yra reikalingos bibliotekos. Flatpak, Snap ir AppImage nevaldomi. APT patikrintas Debian sistemoje; kitų valdiklių palaikymas eksperimentinis.": {
+    "en": "The app automatically detects supported distributions and APT, Pacman, Portage, DNF or Zypper. The interface offers five languages. The portable edition runs without installing the app when the host has the required libraries. Flatpak, Snap and AppImage are not managed. APT was tested on Debian; support for other managers is experimental.",
+    "ru": "Программа автоматически определяет поддерживаемый дистрибутив и APT, Pacman, Portage, DNF или Zypper. Интерфейс доступен на пяти языках. Portable-версия работает без установки приложения при наличии необходимых библиотек. Flatpak, Snap и AppImage не управляются. APT проверен в Debian; поддержка других менеджеров экспериментальная.",
+    "zh": "程序会自动识别受支持的发行版以及 APT、Pacman、Portage、DNF 或 Zypper。界面提供五种语言。如果计算机具备所需的库，便携版无需安装应用即可运行。不管理 Flatpak、Snap 和 AppImage。APT 已在 Debian 上测试；其他管理器的支持属于实验性功能。",
+    "it": "L’app rileva automaticamente le distribuzioni supportate e APT, Pacman, Portage, DNF o Zypper. L’interfaccia offre cinque lingue. L’edizione portatile funziona senza installare l’app se sono presenti le librerie necessarie. Flatpak, Snap e AppImage non sono gestiti. APT è stato testato su Debian; il supporto degli altri gestori è sperimentale."
+  },
+  "Laisvoji programinė įranga pagal GNU GPL v3. Be garantijos. Pilnas licencijos tekstas pateikiamas kartu su programos kodu.": {
+    "en": "Free software under GNU GPL v3. No warranty. The complete license is included with the source code.",
+    "ru": "Свободное программное обеспечение по GNU GPL v3. Без гарантий. Полный текст лицензии включён в исходный код.",
+    "zh": "遵循 GNU GPL v3 的自由软件，不提供担保。完整许可证随源代码提供。",
+    "it": "Software libero con licenza GNU GPL v3. Nessuna garanzia. La licenza completa è inclusa con il codice sorgente."
+  },
+  "Nustatymai": {
+    "en": "Settings",
+    "ru": "Настройки",
+    "zh": "设置",
+    "it": "Impostazioni"
+  },
+  "GNU projektas": {
+    "en": "GNU Project",
+    "ru": "Проект GNU",
+    "zh": "GNU 项目",
+    "it": "Progetto GNU"
+  },
+  "Dabartinės versijos galimybės": {
+    "en": "Current version capabilities",
+    "ru": "Возможности текущей версии",
+    "zh": "当前版本功能",
+    "it": "Funzionalità della versione attuale"
+  },
+  "Toliau pateikiamas siekiamo veikimo aprašymas. Ši versija remiasi tavo sukurtu paketų sąrašu: ji nenustato gamyklinės instaliacijos ar oficialių atnaujinimų kilmės, neatkuria trūkstamų programų ir nustatymų bei automatiškai netaiso paketų duomenų bazės. Konfigūracijų išsaugojimo parinkties dar nėra. Kitų valdiklių nei APT palaikymas eksperimentinis.": {
+    "en": "The description below states the intended behaviour. This version uses your saved package list: it does not identify factory installations or official update origins, restore missing applications or settings, or automatically repair the package database. A configuration-preservation option is not yet available. Support for managers other than APT is experimental.",
+    "ru": "Ниже описано предполагаемое поведение. Эта версия использует сохранённый вами список пакетов: она не определяет заводскую установку или происхождение официальных обновлений, не восстанавливает отсутствующие приложения и настройки и не исправляет базу пакетов автоматически. Отдельной опции сохранения конфигурации пока нет. Поддержка менеджеров кроме APT экспериментальная.",
+    "zh": "以下描述的是预期目标。当前版本使用您保存的软件包列表：不会识别出厂安装或官方更新来源，不会恢复缺失的应用程序或设置，也不会自动修复软件包数据库。目前没有单独的配置保留选项。APT 之外的软件包管理器支持仍为实验性功能。",
+    "it": "La descrizione seguente indica il comportamento previsto. Questa versione usa l’elenco dei pacchetti salvato dall’utente: non identifica le installazioni iniziali o l’origine degli aggiornamenti ufficiali, non ripristina applicazioni mancanti o impostazioni e non ripara automaticamente il database dei pacchetti. L’opzione per conservare le configurazioni non è ancora disponibile. Il supporto dei gestori diversi da APT è sperimentale."
+  },
+  "Kopijuoti gavėją": {
+    "en": "Copy recipient",
+    "ru": "Копировать получателя",
+    "zh": "复制收款人",
+    "it": "Copia destinatario"
+  },
+  "Nukopijuota": {
+    "en": "Copied",
+    "ru": "Скопировано",
+    "zh": "已复制",
+    "it": "Copiato"
+  },
+  "PayPal lange įklijuok gavėjo el. paštą ir pasirink sumą.": {
+    "en": "Paste the recipient’s email in PayPal and choose the amount.",
+    "ru": "Вставьте email получателя в PayPal и выберите сумму.",
+    "zh": "在 PayPal 中粘贴收款人的电子邮箱并选择金额。",
+    "it": "Incolla l’email del destinatario in PayPal e scegli l’importo."
+  },
+  "Siųsti pinigus per PayPal": {
+    "en": "Send money with PayPal",
+    "ru": "Отправить деньги через PayPal",
+    "zh": "通过 PayPal 汇款",
+    "it": "Invia denaro con PayPal"
+  },
+  "Gavėjas perduodamas PayPal nuorodoje. Jei prisijungus jo nerodo, įklijuok gavėjo el. paštą.": {
+    "en": "The recipient is included in the PayPal link. If it is missing after sign-in, paste the recipient’s email.",
+    "ru": "Получатель указан в ссылке PayPal. Если после входа он не отображается, вставьте его email.",
+    "zh": "PayPal 链接中已包含收款人。如果登录后未显示，请粘贴收款人的电子邮箱。",
+    "it": "Il destinatario è incluso nel link PayPal. Se manca dopo l’accesso, incolla la sua email."
+  }
+}

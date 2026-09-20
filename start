@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+app_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+if [ -f "$app_dir/portable.mode" ]; then
+    exec /usr/bin/python3 -I "$app_dir/portable.py" "$@"
+fi
+exec /usr/bin/python3 -I "$app_dir/app.py" "$@"

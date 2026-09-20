@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+portable-data/
+portable.mode
+initial-point.json
+*.log
+*.zip

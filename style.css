@@ -1,0 +1,48 @@
+window { background: #f5f7fb; color: #172438; font-family: Inter, Cantarell, sans-serif; }
+headerbar { background: #ffffff; box-shadow: none; border-bottom: 1px solid #e7ebf2; }
+.window-title { font-weight: 700; font-size: 13px; }
+.sidebar { background: #12283b; color: #ffffff; padding: 27px 20px 24px; }
+.logo { background: #47ddba; color: #102c35; border-radius: 12px; padding: 13px; font-size: 24px; font-weight: 900; margin-right: 100px; }
+.brand { font-size: 23px; font-weight: 800; margin-top: 6px; }
+.sidebar-muted { color: #a9bdce; font-size: 12px; line-height: 1.5; }
+.eyebrow { color: #69dbbd; font-size: 10px; font-weight: 800; letter-spacing: 2px; }
+.navigation { margin-top: 14px; }
+button { background-image: none; box-shadow: none; border-radius: 9px; padding: 10px 14px; font-weight: 600; }
+button.nav-button { background: transparent; color: #c6d5e2; border: none; padding: 6px 12px; min-height: 20px; }
+button.nav-button:hover { background: #1b384e; }
+button.nav-button.active { background: #24495d; color: #6ce6c5; }
+.main { padding: 25px 28px 18px; }
+.page-title { font-size: 27px; font-weight: 800; letter-spacing: -0.6px; }
+.muted { color: #67788b; font-size: 12px; }
+.tiny { color: #8391a1; font-size: 10px; }
+.stat-card { background: #ffffff; border: 1px solid #e4eaf2; border-radius: 12px; padding: 16px 20px; }
+.stat-title { color: #718095; font-size: 10px; font-weight: 700; letter-spacing: 1px; }
+.stat-value { font-size: 27px; font-weight: 800; }
+.list-frame { border: 1px solid #e3e9f1; border-radius: 12px; background: #ffffff; }
+list { background: #ffffff; }
+list row { padding: 0; border-bottom: 1px solid #eff2f6; }
+.package-row { padding: 14px 16px; }
+.package-title { font-weight: 700; font-size: 14px; }
+.badge { background: #edf2f7; color: #637487; border-radius: 7px; padding: 4px 7px; font-size: 10px; font-weight: 600; }
+.selection-bar { padding: 12px 0 0; }
+button.primary { background: #167c69; color: white; border: 1px solid #167c69; }
+button.primary:hover { background: #116454; }
+button.secondary { background: #ffffff; color: #33465e; border: 1px solid #dce4ed; }
+button.secondary:hover { background: #edf2f7; }
+button.danger { background: #bb394e; color: white; border: 1px solid #bb394e; }
+button.danger:hover { background: #a52e43; }
+button:disabled { opacity: 0.45; }
+entry, searchentry { background: white; color: #172438; border: 1px solid #dce4ed; border-radius: 9px; padding: 8px; min-height: 25px; }
+checkbutton { color: #5d7084; font-size: 12px; }
+check:checked { background: #167c69; border-color: #167c69; color: white; }
+.info-card { background: #eaf5f0; border: 1px solid #d2e9df; border-radius: 12px; padding: 18px; }
+.section-title { font-size: 18px; font-weight: 750; }
+.empty { padding: 30px; color: #708094; }
+.dialog-content { padding: 24px; }
+.plan-text { background: #ffffff; color: #243a50; padding: 14px; border-radius: 8px; font-size: 12px; }
+
+.logo { font-size: 18px; }
+
+.settings-content { padding: 14px; min-width: 210px; }
+.logo { margin-right: 0; padding: 8px; font-size: 16px; }
+button.gnu-link { padding: 4px; background: #ffffff; border-radius: 10px; }

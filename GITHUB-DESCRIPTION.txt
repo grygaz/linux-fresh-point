@@ -1,0 +1,1 @@
+GTK4 Linux package manager GUI with package-list restore points, removal previews, multilingual settings and experimental multi-distro support.
