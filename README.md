@@ -4,6 +4,24 @@ A GTK 4 desktop application for reviewing installed Linux software, removing sel
 
 **Status:** experimental. APT inventory and previews have been tested on Debian 13. Pacman, Portage, DNF and Zypper adapters are implemented, but have not been validated on their native distributions.
 
+## Interface preview
+
+### Installed applications
+
+![Installed applications](screenshots/01-installed-applications.png)
+
+### All packages
+
+![All packages](screenshots/02-all-packages.png)
+
+### Restore points
+
+![Restore points](screenshots/03-restore-points.png)
+
+### About
+
+![About Linux fresh point](screenshots/04-about.png)
+
 ## What it does
 
 - Detects supported Linux distributions and their native package manager.
