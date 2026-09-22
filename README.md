@@ -1,6 +1,6 @@
 # Linux fresh point
 
-A GTK 4 desktop application for reviewing installed Linux software, removing selected packages, and managing package-list restore points while keeping installed updates.
+A Linux package-management application with a GTK 4 desktop interface and an interactive terminal interface for servers and SSH sessions. Review installed software, remove selected packages, and manage package-list restore points while keeping installed updates.
 
 **Status:** experimental. APT inventory and previews have been tested on Debian 13. Pacman, Portage, DNF and Zypper adapters are implemented, but have not been validated on their native distributions.
 
@@ -25,6 +25,8 @@ A GTK 4 desktop application for reviewing installed Linux software, removing sel
 ## What it does
 
 - Detects supported Linux distributions and their native package manager.
+- Selects the desktop or terminal interface from the session environment, with `--tui` available to force terminal mode.
+- Checks runtime libraries at startup and installs missing library packages through the host's native package manager.
 - Lists installed packages and desktop applications owned by those packages.
 - Supports selecting one or several packages for removal.
 - Previews changes before requesting administrator authorization.
@@ -32,7 +34,7 @@ A GTK 4 desktop application for reviewing installed Linux software, removing sel
 - Uses a saved package list to identify later additions while retaining required dependencies and protected system packages.
 - Keeps installed package versions rather than downgrading to versions recorded in a point.
 - Records package-removal results in local logs.
-- Offers English (default), Lithuanian, Russian, Simplified Chinese and Italian interfaces.
+- Offers English (default), Lithuanian, Russian, Simplified Chinese and Italian language preferences; some terminal prompts remain in English.
 - Includes a portable source launcher, settings menu and license information.
 
 ## What “restore” means
@@ -58,20 +60,19 @@ Unknown distributions and OSTree-based atomic systems are rejected. This is not 
 ## Requirements
 
 - Python 3 at `/usr/bin/python3`.
-- PyGObject, GTK 4 and GdkPixbuf introspection libraries.
 - The host's supported native package manager.
 - `python3-apt` for APT; the Python Portage module for Gentoo; `pacman-conf` for Arch; `rpm` for RPM systems.
-- `pkexec` and a desktop PolicyKit authentication agent for removal.
-- For non-APT removal: GNOME Terminal, Konsole, Xfce Terminal, MATE Terminal or xterm.
+- Desktop mode: PyGObject, GTK 4 and GdkPixbuf introspection libraries; `pkexec` and a desktop PolicyKit authentication agent for removal.
+- Non-APT removal from desktop mode: GNOME Terminal, Konsole, Xfce Terminal, MATE Terminal or xterm.
+- Terminal mode: Python's `curses` module and an interactive terminal. Regular users need `sudo` or `doas` for privileged operations; root does not. GTK and a graphical terminal emulator are not required.
 
-On startup, the launcher checks the required Python and GTK libraries. If any are missing, it uses the host's native package manager and requests administrator authorization to install only the missing packages. Run the GUI as your regular user, not with `sudo`.
+On startup, the launchers check the Python package-manager libraries and, in desktop mode, the GTK libraries. Missing library packages are installed through the native package manager, then checked again before launch. Installation may require network access and administrator authorization; root runs the installer directly. Terminal mode skips the GTK checks. Python itself, the native package manager, curses, and authorization tools must already be available. Run the GUI as your regular user, not with `sudo`; the TUI also supports root.
 
 ## Run
 
 Download or clone the repository, then run from its directory:
 
 ```sh
-chmod +x start
 ./start
 ```
 
@@ -87,6 +88,21 @@ On a server or another system without a graphical session, `./start` automatical
 
 The terminal interface mirrors the installed-applications, all-packages, restore-points, language and help views. Use the arrow keys to navigate, `Space` to select packages and `P` to preview a cleanup. It works over SSH when a terminal is allocated (for example, `ssh -t host`). You can run it as a regular user or as root. Regular users authorize removal through `sudo` or `doas`; root runs the backend directly. Both paths require reviewing and confirming a removal plan. Settings and restore points belong to the account running the application (or the portable data directory in portable mode).
 
+To exit the terminal interface, press `Q` or `Esc` on the main menu. The application asks **Do you want to exit?**, with **No** selected by default. Use the arrow keys and `Enter` to choose **No** or **Yes**, or press `Y` to exit and `N` or `Esc` to cancel. In the package and restore-point views, `Q` or `Esc` returns to the main menu.
+
+### Terminal controls
+
+| View | Controls |
+|---|---|
+| Main menu | Up/down arrows or Tab to move; Enter to open; `R` to refresh; `Q` or Esc to request exit |
+| Packages and applications | Arrows or Page Up/Down to browse; Space to select; `/` to search; `C` to clear selection; `P` to preview removal |
+| Dependency removal | `D` in the package view toggles unused-dependency removal for APT and Pacman |
+| Restore points | Arrows to browse; `N` to create; `D` to delete a saved list; `P` to preview cleanup; `C` to toggle APT cache cleanup |
+| Preview | Arrows or Page Up/Down to scroll; Enter or Esc to close the preview, followed by a separate apply confirmation; `Y` applies, any other key cancels |
+| Language | Arrows and Enter to select; Esc to return; number shortcuts also work |
+
+Protected packages are marked with `!` and cannot be selected. Selected packages remain selected across searches and package views until cleared. On servers without desktop application entries, use **All packages** even if **Applications** is empty.
+
 To add a desktop-menu entry:
 
 ```sh
@@ -100,6 +116,8 @@ The installed program uses `~/.local/share/linux-tvarka/` for compatibility with
 ```sh
 sh portable.sh
 ```
+
+Force the terminal interface with `sh portable.sh --tui`. Otherwise, the portable launcher uses the same graphical-session detection as `start`.
 
 Alternatively, create the portable-mode marker and use the executable launcher:
 
@@ -122,6 +140,8 @@ New dependencies required by retained packages and protected system components m
 
 Open **Settings** for language selection and **About**. The About window contains the project goals, current implementation limits, license text and an optional PayPal support link.
 
+English is the default when no valid language preference is saved, regardless of the system language. An explicitly selected language is remembered on the next launch. In the terminal interface, open **Language** from the main menu, select with the arrow keys, and press `Enter`. Portable mode loads preferences from its machine-specific portable data directory. Menu labels and About text use the selected language; some terminal prompts and help text remain in English.
+
 ## Development checks
 
 ```sh
@@ -129,7 +149,7 @@ python3 -m unittest discover -s tests -v
 python3 -m compileall -q .
 ```
 
-The included tests cover language preferences, manager detection, dependency retention, point deletion and selected command-safety checks. They do not prove that removal works correctly on every supported distribution. No real package-removal transaction was performed as part of the Debian GUI checks.
+The included tests cover language defaults and persistence, manager detection, dependency checks, headless desktop-entry discovery, terminal navigation and exit confirmation, root startup and privilege-command selection, dependency retention, point deletion and selected command-safety checks. The terminal interface has also been launched against an Ubuntu/WSL package inventory. These checks do not prove that removal works correctly on every supported distribution; no real package-removal transaction was performed as part of these interface checks.
 
 ## License and artwork
 
