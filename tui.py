@@ -301,8 +301,6 @@ def configure_portable():
 def main():
     if not sys.stdin.isatty() or not sys.stdout.isatty():
         sys.exit('Linux fresh point TUI requires an interactive terminal. For SSH, use ssh -t.')
-    if os.geteuid() == 0:
-        sys.exit('Run the TUI as your regular user; it requests administrator rights only when applying changes.')
     configure_portable()
     curses.wrapper(lambda screen: TerminalUI(screen).run())
 

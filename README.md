@@ -81,7 +81,7 @@ On a server or another system without a graphical session, `./start` automatical
 ./start --tui
 ```
 
-The terminal interface mirrors the installed-applications, all-packages, restore-points, language and help views. Use the arrow keys to navigate, `Space` to select packages and `P` to preview a cleanup. It works over SSH when a terminal is allocated (for example, `ssh -t host`). Run it as your regular user; it uses `sudo` or `doas` only after you review and confirm a removal plan.
+The terminal interface mirrors the installed-applications, all-packages, restore-points, language and help views. Use the arrow keys to navigate, `Space` to select packages and `P` to preview a cleanup. It works over SSH when a terminal is allocated (for example, `ssh -t host`). You can run it as a regular user or as root. Regular users authorize removal through `sudo` or `doas`; root runs the backend directly. Both paths require reviewing and confirming a removal plan. Settings and restore points belong to the account running the application (or the portable data directory in portable mode).
 
 To add a desktop-menu entry:
 

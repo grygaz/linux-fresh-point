@@ -11,6 +11,28 @@ except ModuleNotFoundError as exc:
 
 @unittest.skipIf(tui is None, 'curses is provided by the target Linux runtime')
 class TuiTests(unittest.TestCase):
+    @patch('tui.os.geteuid', return_value=0, create=True)
+    @patch('tui.sys.stdin.isatty', return_value=True)
+    @patch('tui.sys.stdout.isatty', return_value=True)
+    @patch('tui.configure_portable')
+    @patch('tui.curses.wrapper')
+    def test_root_can_start_terminal_interface(self, wrapper, portable, _stdout, _stdin, _uid):
+        tui.main()
+        portable.assert_called_once_with()
+        wrapper.assert_called_once()
+
+    @patch('tui.os.geteuid', return_value=0, create=True)
+    @patch('tui.shutil.which')
+    @patch('tui.subprocess.run')
+    def test_root_apply_does_not_require_sudo(self, run, which, _uid):
+        run.return_value.returncode = 0
+        run.return_value.stdout = '{"ok": true, "data": {"removed": 1}}'
+        run.return_value.stderr = ''
+        payload = {'request': {'mode': 'remove', 'selected': ['example']}, 'hash': 'reviewed-plan'}
+        self.assertEqual(tui.backend('apply', payload, privileged=True), {'removed': 1})
+        which.assert_not_called()
+        self.assertEqual(run.call_args.args[0], ['/usr/bin/python3', '-I', str(tui.HERE / 'backend.py'), 'apply'])
+
     def test_size_text(self):
         self.assertEqual(tui.size_text(25_000_000), '25.0 MB')
         self.assertEqual(tui.size_text(2_500_000_000), '2.5 GB')
