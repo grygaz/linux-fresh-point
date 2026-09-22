@@ -75,6 +75,14 @@ chmod +x start
 ./start
 ```
 
+On a server or another system without a graphical session, `./start` automatically opens the terminal interface. You can select it explicitly from any terminal:
+
+```sh
+./start --tui
+```
+
+The terminal interface mirrors the installed-applications, all-packages, restore-points, language and help views. Use the arrow keys to navigate, `Space` to select packages and `P` to preview a cleanup. It works over SSH when a terminal is allocated (for example, `ssh -t host`). Run it as your regular user; it uses `sudo` or `doas` only after you review and confirm a removal plan.
+
 To add a desktop-menu entry:
 
 ```sh

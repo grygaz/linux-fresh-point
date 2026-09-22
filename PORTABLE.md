@@ -6,9 +6,11 @@ Išskleisk portable ZIP į rašomą aplanką (pvz., USB laikmeną). Terminale ta
 ./start
 ```
 
+Be grafinės sesijos automatiškai atidaroma terminalo sąsaja. Ją taip pat galima pasirinkti tiesiogiai su `./start --tui`.
+
 Diegimo ir meniu nuorodos nereikia. Nustatymai bei nauji atkūrimo taškai saugomi šalia programos, `portable-data/` kataloge, atskirai kiekvienam kompiuteriui. Prieš atjungdamas USB uždaryk programą. Portable archyve nėra šio kompiuterio pradinio atkūrimo taško ar vartotojo duomenų.
 
-Tai ne savarankiškas AppImage: reikalingos kompiuteryje įdiegtos Python 3, PyGObject, GTK4 ir gimtojo paketų valdiklio bibliotekos. APT reikia python3-apt, Gentoo – Python Portage. Šalinimui reikia pkexec ir autentifikavimo agento; ne APT sistemose – palaikomo terminalo. Paleidiklis patikrina pagrindines priklausomybes; jų automatiškai neįdiegia.
+Tai ne savarankiškas AppImage: reikalingos kompiuteryje įdiegtos Python 3 ir gimtojo paketų valdiklio bibliotekos; grafinei sąsajai taip pat reikia PyGObject ir GTK4. APT reikia python3-apt, Gentoo – Python Portage. Paleidiklis patikrina pagrindines priklausomybes ir trūkstamus sistemos paketus pasiūlo įdiegti per gimtąjį paketų valdiklį. Terminalo sąsajoje šalinimui naudojamas `sudo` arba `doas`.
 
 Palaikomos APT, Pacman, Portage, DNF ir Zypper sistemų šeimos, aprašytos NAUDOJIMAS.md. Visų Linux distribucijų, architektūrų ar versijų suderinamumas negarantuojamas. Alpine/apk, NixOS, Void/xbps ir atominių sistemų (pvz., Fedora Silverblue) ši versija nepalaiko. Ne APT adapteriai dar neišbandyti tikrose distribucijose.
 

@@ -42,20 +42,21 @@ PACKAGE_MAP = {
 }
 
 
-def missing_libraries(manager):
+def missing_libraries(manager, graphical=True):
     """Return import/typelib names that the application cannot currently load."""
     missing = []
-    try:
-        gi = importlib.import_module('gi')
-    except (ImportError, ValueError):
-        missing.extend(('gi', 'Gtk', 'GdkPixbuf'))
-    else:
-        for namespace, version in (('Gtk', '4.0'), ('GdkPixbuf', '2.0')):
-            try:
-                gi.require_version(namespace, version)
-                importlib.import_module('gi.repository.' + namespace)
-            except (ImportError, ValueError):
-                missing.append(namespace)
+    if graphical:
+        try:
+            gi = importlib.import_module('gi')
+        except (ImportError, ValueError):
+            missing.extend(('gi', 'Gtk', 'GdkPixbuf'))
+        else:
+            for namespace, version in (('Gtk', '4.0'), ('GdkPixbuf', '2.0')):
+                try:
+                    gi.require_version(namespace, version)
+                    importlib.import_module('gi.repository.' + namespace)
+                except (ImportError, ValueError):
+                    missing.append(namespace)
     if manager in ('apt', 'portage'):
         try:
             importlib.import_module(manager)
@@ -85,20 +86,21 @@ def install_command(manager, command, packages):
     return [command, '--non-interactive', 'install', '--no-recommends', *packages]
 
 
-def elevate(command):
+def elevate(command, graphical=True):
     if os.geteuid() == 0:
         return command
-    for helper in ('pkexec', 'sudo', 'doas'):
+    helpers = ('pkexec', 'sudo', 'doas') if graphical else ('sudo', 'doas')
+    for helper in helpers:
         path = shutil.which(helper)
         if path:
             return [path, *command]
     raise RuntimeError('Administrator authorization is required, but pkexec, sudo, and doas are unavailable.')
 
 
-def ensure_dependencies():
+def ensure_dependencies(graphical=True):
     from system_info import detect
     system = detect()
-    missing = missing_libraries(system['manager'])
+    missing = missing_libraries(system['manager'], graphical)
     if not missing:
         return
     packages = packages_for(system['manager'], missing)
@@ -106,17 +108,17 @@ def ensure_dependencies():
         raise RuntimeError('No installation packages are known for: ' + ', '.join(missing))
     print('Linux fresh point: missing required libraries: ' + ', '.join(missing), file=sys.stderr)
     print('Linux fresh point: installing: ' + ', '.join(packages), file=sys.stderr)
-    result = subprocess.run(elevate(install_command(system['manager'], system['command'], packages)))
+    result = subprocess.run(elevate(install_command(system['manager'], system['command'], packages), graphical))
     if result.returncode:
         raise RuntimeError('Dependency installation was cancelled or failed.')
     importlib.invalidate_caches()
-    still_missing = missing_libraries(system['manager'])
+    still_missing = missing_libraries(system['manager'], graphical)
     if still_missing:
         raise RuntimeError('Libraries are still unavailable after installation: ' + ', '.join(still_missing))
 
 
 if __name__ == '__main__':
     try:
-        ensure_dependencies()
+        ensure_dependencies('--tui' not in sys.argv)
     except Exception as exc:
         sys.exit('Linux fresh point: ' + str(exc))

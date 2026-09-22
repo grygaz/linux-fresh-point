@@ -16,6 +16,11 @@ class DependencyCheckTests(unittest.TestCase):
             dc.install_command('apt', '/usr/bin/apt-get', ['python3-gi']),
             ['/usr/bin/apt-get', 'install', '-y', 'python3-gi'],
         )
+
+    @patch.object(dc.importlib, 'import_module')
+    def test_terminal_mode_does_not_import_gtk(self, import_module):
+        self.assertEqual(dc.missing_libraries('dnf', graphical=False), [])
+        import_module.assert_not_called()
         self.assertEqual(
             dc.install_command('pacman', '/usr/bin/pacman', ['gtk4']),
             ['/usr/bin/pacman', '-S', '--needed', '--noconfirm', 'gtk4'],
