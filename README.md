@@ -64,7 +64,7 @@ Unknown distributions and OSTree-based atomic systems are rejected. This is not 
 - `pkexec` and a desktop PolicyKit authentication agent for removal.
 - For non-APT removal: GNOME Terminal, Konsole, Xfce Terminal, MATE Terminal or xterm.
 
-No dependencies are automatically installed. Run the GUI as your regular user, not with `sudo`.
+On startup, the launcher checks the required Python and GTK libraries. If any are missing, it uses the host's native package manager and requests administrator authorization to install only the missing packages. Run the GUI as your regular user, not with `sudo`.
 
 ## Run
 
@@ -96,7 +96,7 @@ touch portable.mode
 ./start
 ```
 
-Portable settings and restore points are stored in `portable-data/`, separately for each machine. The directory must be writable. This is portable source code, **not a self-contained AppImage**: host libraries are still required.
+Portable settings and restore points are stored in `portable-data/`, separately for each machine. The directory must be writable. This is portable source code, **not a self-contained AppImage**: required host libraries are checked and, when missing, installed through the native package manager.
 
 ## Restore points
 
