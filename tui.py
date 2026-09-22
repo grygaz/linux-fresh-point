@@ -141,15 +141,26 @@ class TerminalUI:
             pass
         self.screen.keypad(True)
         self.load()
+        cursor = 0
         while True:
             system = self.data['system']
-            self.frame('Main menu', '1–5 choose · R refresh · Q quit')
+            self.frame('Main menu', '↑/↓ move · Enter open · 1–5 shortcuts · R refresh · Q quit')
             self.write(2, 2, f"{system['pretty']} · {system['manager'].upper()}", curses.A_BOLD)
             options = ('1  ' + tr('Programos'), '2  ' + tr('Visi paketai'), '3  ' + tr('Atkūrimo taškai'),
                        '4  ' + tr('Kalba'), '5  ' + tr('Apie programą'))
             for index, option in enumerate(options, 4):
-                self.write(index, 4, option)
+                self.write(index, 4, option, curses.A_REVERSE if index - 4 == cursor else 0)
             key = self.screen.getch()
+            if key in (curses.KEY_DOWN, ord('j'), 9):
+                cursor = (cursor + 1) % len(options)
+                continue
+            if key in (curses.KEY_UP, ord('k'), curses.KEY_BTAB):
+                cursor = (cursor - 1) % len(options)
+                continue
+            if key in (10, 13, curses.KEY_ENTER):
+                key = ord('1') + cursor
+            elif ord('1') <= key <= ord('5'):
+                cursor = key - ord('1')
             try:
                 if key == ord('1'):
                     self.package_browser(True)
@@ -274,13 +285,25 @@ class TerminalUI:
         self.message('Cleanup complete', self.status)
 
     def languages(self):
-        self.frame(tr('Kalba'), 'Press number · Esc return')
-        for index, (code, name) in enumerate(i18n.LANGUAGES, 1):
-            self.write(index + 1, 2, f"{index}  {name}" + ('  *' if code == i18n.language() else ''))
-        key = self.screen.getch()
-        if ord('1') <= key < ord('1') + len(i18n.LANGUAGES):
-            i18n.set_language(i18n.LANGUAGES[key - ord('1')][0])
-            self.status = 'Language preference saved.'
+        cursor = [code for code, _ in i18n.LANGUAGES].index(i18n.language())
+        while True:
+            self.frame(tr('Kalba'), '↑/↓ move · Enter select · Esc return')
+            for index, (code, name) in enumerate(i18n.LANGUAGES):
+                self.write(index + 2, 2, f"{index + 1}  {name}" + ('  *' if code == i18n.language() else ''),
+                           curses.A_REVERSE if index == cursor else 0)
+            key = self.screen.getch()
+            if key in (27, ord('q')):
+                return
+            if key in (curses.KEY_DOWN, ord('j'), 9):
+                cursor = (cursor + 1) % len(i18n.LANGUAGES)
+            elif key in (curses.KEY_UP, ord('k'), curses.KEY_BTAB):
+                cursor = (cursor - 1) % len(i18n.LANGUAGES)
+            elif key in (10, 13, curses.KEY_ENTER) or ord('1') <= key < ord('1') + len(i18n.LANGUAGES):
+                if ord('1') <= key < ord('1') + len(i18n.LANGUAGES):
+                    cursor = key - ord('1')
+                i18n.set_language(i18n.LANGUAGES[cursor][0])
+                self.status = 'Language preference saved.'
+                return
 
     def about(self):
         description = HERE / 'descriptions' / (i18n.language() + '.md')

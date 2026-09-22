@@ -75,6 +75,10 @@ chmod +x start
 ./start
 ```
 
+Git records the launchers as executable, so a fresh Linux Git checkout should run `./start` directly. If a ZIP extraction or file copy loses executable permissions, use `sh start` (no `chmod` needed), or run `chmod +x start` once. A script cannot change its own execute permission before the operating system allows it to run.
+
+Startup selects GTK when `DISPLAY` or `WAYLAND_DISPLAY` identifies a graphical session, and the terminal interface when both are absent. `--tui` always selects terminal mode. In the terminal main menu and language menu, use the up/down arrows and Enter; number keys remain optional shortcuts.
+
 On a server or another system without a graphical session, `./start` automatically opens the terminal interface. You can select it explicitly from any terminal:
 
 ```sh
