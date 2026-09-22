@@ -123,6 +123,24 @@ class TerminalUI:
         self.write(2, 1, question, curses.A_BOLD)
         return self.screen.getch() in (ord('y'), ord('Y'))
 
+    def confirm_exit(self):
+        selected = 0
+        while True:
+            self.frame('Exit', '←/→ choose · Enter confirm · Esc cancel')
+            self.write(2, 2, 'Do you want to exit?', curses.A_BOLD)
+            for index, label in enumerate(('No', 'Yes')):
+                self.write(4, 2 + index * 10, label,
+                           curses.A_REVERSE if index == selected else 0)
+            key = self.screen.getch()
+            if key in (27, ord('n'), ord('N')):
+                return False
+            if key in (ord('y'), ord('Y')):
+                return True
+            if key in (curses.KEY_LEFT, curses.KEY_RIGHT, curses.KEY_UP, curses.KEY_DOWN, 9):
+                selected = 1 - selected
+            elif key in (10, 13, curses.KEY_ENTER):
+                return selected == 1
+
     def load(self):
         self.status = 'Reading installed package database…'
         self.frame('Loading')
@@ -175,7 +193,8 @@ class TerminalUI:
                 elif key in (ord('r'), ord('R')):
                     self.load()
                 elif key in (ord('q'), ord('Q'), 27):
-                    return
+                    if self.confirm_exit():
+                        return
             except Exception as exc:
                 self.status = 'Operation failed.'
                 self.message('Error', i18n.translate_error(str(exc)))
@@ -325,6 +344,8 @@ def main():
     if not sys.stdin.isatty() or not sys.stdout.isatty():
         sys.exit('Linux fresh point TUI requires an interactive terminal. For SSH, use ssh -t.')
     configure_portable()
+    # Load the selected account/portable preferences; absent preferences use English.
+    i18n.load_language()
     curses.wrapper(lambda screen: TerminalUI(screen).run())
 
 

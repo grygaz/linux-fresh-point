@@ -23,9 +23,22 @@ class TuiTests(unittest.TestCase):
         ui.write = Mock()
         ui.package_browser = Mock()
         ui.about = Mock()
+        ui.confirm_exit = Mock(return_value=True)
         ui.run()
         ui.package_browser.assert_called_once_with(False)
         ui.about.assert_called_once_with()
+
+    def test_exit_defaults_to_no_and_arrows_select_yes(self):
+        screen = Mock()
+        ui = tui.TerminalUI(screen)
+        ui.frame = Mock()
+        ui.write = Mock()
+        screen.getch.side_effect = [10]
+        self.assertFalse(ui.confirm_exit())
+        screen.getch.side_effect = [tui.curses.KEY_RIGHT, 10]
+        self.assertTrue(ui.confirm_exit())
+        screen.getch.side_effect = [27]
+        self.assertFalse(ui.confirm_exit())
 
     @patch('tui.os.geteuid', return_value=0, create=True)
     @patch('tui.sys.stdin.isatty', return_value=True)
