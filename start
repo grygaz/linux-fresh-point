@@ -1,6 +1,19 @@
 #!/bin/sh
 set -eu
 app_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+if [ ! -x /usr/bin/python3 ]; then
+    echo 'Linux fresh point: Python 3 is required at /usr/bin/python3.' >&2
+    exit 1
+fi
+mode=gui
+if [ "${1:-}" = "--tui" ] || { [ -z "${DISPLAY:-}" ] && [ -z "${WAYLAND_DISPLAY:-}" ]; }; then
+    mode=tui
+fi
+if [ "$mode" = tui ]; then
+    /usr/bin/python3 -I "$app_dir/dependency_check.py" --tui
+    exec /usr/bin/python3 -I "$app_dir/tui.py"
+fi
+/usr/bin/python3 -I "$app_dir/dependency_check.py"
 if [ -f "$app_dir/portable.mode" ]; then
     exec /usr/bin/python3 -I "$app_dir/portable.py" "$@"
 fi

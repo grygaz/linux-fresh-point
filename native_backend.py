@@ -135,15 +135,21 @@ def snapshot(system):
     if not rows: raise RuntimeError('Installed package database is empty.')
     roots = {k for k,r in rows.items() if r['protected'] or SAFE.match(k.split('/')[-1].split(':')[0])}
     for key in closure(rows,roots): rows[key]['protected']=True
-    # Desktop apps are matched to installed package file lists, never guessed by name.
-    import gi
-    from gi.repository import Gio
     owners = {f:k for k,r in rows.items() for f in r['files'] if f.endswith('.desktop')}
-    for app in Gio.AppInfo.get_all():
-        path = app.get_filename() if hasattr(app,'get_filename') else None
-        if app.should_show() and path in owners:
-            r=rows[owners[path]]; r['app']=True; r['title']=app.get_display_name()
-            if app.get_icon(): r['icon']=app.get_icon().to_string()
+    # Desktop apps are matched to installed package file lists, never guessed by name.
+    if os.environ.get('LINUX_FRESH_POINT_HEADLESS') == '1':
+        from desktop_info import entries
+        for app in entries():
+            if app['path'] in owners:
+                r=rows[owners[app['path']]]; r['app']=True; r['title']=app['title']; r['icon']=app['icon']
+    else:
+        import gi
+        from gi.repository import Gio
+        for app in Gio.AppInfo.get_all():
+            path = app.get_filename() if hasattr(app,'get_filename') else None
+            if app.should_show() and path in owners:
+                r=rows[owners[path]]; r['app']=True; r['title']=app.get_display_name()
+                if app.get_icon(): r['icon']=app.get_icon().to_string()
     return rows
 
 def data_dir():

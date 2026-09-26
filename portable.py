@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # SPDX-License-Identifier: GPL-3.0-only
-"""Portable source launcher. Uses host GTK/package APIs; installs nothing."""
+"""Portable source launcher. Uses host GTK and package APIs."""
 import hashlib
 import os
 from pathlib import Path

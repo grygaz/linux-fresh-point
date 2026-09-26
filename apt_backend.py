@@ -118,6 +118,21 @@ def create_point(name):
 
 
 def desktop_names(cache):
+    if os.environ.get('LINUX_FRESH_POINT_HEADLESS') == '1':
+        from desktop_info import entries
+        infos = entries()
+        paths = [item['path'] for item in infos]
+        owners = {}
+        for offset in range(0, len(paths), 100):
+            result = subprocess.run(['/usr/bin/dpkg-query', '-S', *paths[offset:offset+100]],
+                                    text=True, capture_output=True)
+            for line in result.stdout.splitlines():
+                if ': ' in line:
+                    packages, file = line.split(': ', 1)
+                    owners[file] = packages.split(', ')[0]
+        apps = {owners[item['path']]: {k: item[k] for k in ('title', 'description', 'icon')}
+                for item in infos if item['path'] in owners and owners[item['path']] in cache}
+        return apps, []
     import gi
     from gi.repository import Gio
     infos = [a for a in Gio.AppInfo.get_all() if a.should_show() and hasattr(a, 'get_filename') and a.get_filename()]
